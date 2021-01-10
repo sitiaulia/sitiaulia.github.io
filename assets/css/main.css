@@ -1,0 +1,208 @@
+/*
+ * @Author: Siti Aulia Urrahmah
+ * @Date: 2021-01-10 06:18:09 
+ * @Last Modified by: Siti Aulia Urrahmah
+ * @Last Modified time: 2021-01-10 12:22:04
+ */
+
+* {
+  outline: none;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e0e0;
+}
+
+.grid-container {
+  width: fit-content;
+  background-color: #e0e0e0;
+  padding: 16px;
+  border-radius: 4px;
+  background: rgba(224, 224, 224, 1);
+  box-shadow: 5px 5px 10px #cecece, -5px -5px 10px #f0f0f0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1.8fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+  gap: 16px 16px;
+  grid-template-areas:
+    "screen screen screen screen"
+    "cos sin tan sqrt"
+    "add subtract multiple divide"
+    "seven eight nine result"
+    "four five six result"
+    "one two three result"
+    "zero dot ac result"
+    "foot foot foot foot";
+  position: relative;
+  overflow: hidden;
+}
+
+.badge {
+  font-weight: bold;
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  padding: 8px 36px;
+  transform: translate(-25%, 50%) rotate(-45deg);
+}
+
+.screen {
+  grid-area: screen;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  float: right;
+}
+
+.screen .result {
+  max-width: 250px;
+  font-size: 2em;
+  transition: all 0.25s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.screen .calculator {
+  max-width: 250px;
+  color: rgba(0, 0, 0, 0.5);
+  transition: all 0.25s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.result {
+  grid-area: result;
+}
+
+.cos {
+  grid-area: cos;
+}
+
+.sin {
+  grid-area: sin;
+}
+
+.tan {
+  grid-area: tan;
+}
+
+.sqrt {
+  grid-area: sqrt;
+}
+
+.add {
+  grid-area: add;
+}
+
+.subtract {
+  grid-area: subtract;
+}
+
+.multiple {
+  grid-area: multiple;
+}
+
+.divide {
+  grid-area: divide;
+}
+
+.ac {
+  grid-area: ac;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.dot {
+  grid-area: dot;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.foot {
+  grid-area: foot;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: #0086f1;
+}
+
+.foot small {
+  cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  width: 56px;
+  border-radius: 12px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #f0f0f0;
+  color: #191919;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-full {
+  height: 100%;
+}
+
+.txt-blue {
+  color: #0086f1;
+}
+
+.txt-orange {
+  color: #ff5722;
+}
